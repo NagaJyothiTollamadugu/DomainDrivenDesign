@@ -53,11 +53,9 @@ This layer contains information about the business domain. The state of business
 From a design stand-point, the domain layer should have a well defined boundary to avoid the corruption of the layer from non-core domain layer concerns such as vendor-specific translations, data filtering, transformations, etc. Domain elements should be designed to hold the domain state and behavior correctly. Different domain elements are structured differently based on state and behavior. Table 2 below shows the domain elements and what they contain.
 # Design
 From a design stand-point, the domain layer should have a well defined boundary to avoid the corruption of the layer from non-core domain layer concerns such as vendor-specific translations, data filtering, transformations, etc. Domain elements should be designed to hold the domain state and behavior correctly. Different domain elements are structured differently based on state and behavior.    
-
 * Entity:
    “Objects that have a distinct identity that runs through time and different representations. You also hear these called ‘reference objects’.”Although I think the above explanation is quite straightforward, I will give mine.Entities are actors important enough to be unique and have identifiers, simple as that!
-* Value Objects:
-    
+* Value Objects: 
  “Objects that matter only as the combination of their attributes. Two value objects with the same values for all their attributes are considered equal.”That is, it is an object inwhich we are interested only in its attributes, not its identity. Therefore Value Objects do not have identities and should be objects less complex than entities and immutable, thus facilitating their creation and manipulation.
  * Aggregates:
  which contain both state (data) and behavior (operations), should have clearly defined state and behavior. At the same time, this behavior should not extend beyond the limits of the object's boundaries. Entities should do most of the work in the use case acting on their local state. But they shouldn't know about too many unrelated concepts.
@@ -72,4 +70,6 @@ There are several design patterns that help in domain driven design and developm
  * Temporal Patterns
 
 # Reference
-* [domain driven design {https://www.youtube.com/watch?v=Evers5npkmE&t=0s}]
+* [domain driven design]
+* (https://www.youtube.com/watch?v=Evers5npkmE&t=0s)
+* (https://www.youtube.com/watch?v=WZb-FPmiuMY&t=0s)
